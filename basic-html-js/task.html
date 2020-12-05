@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="testingDemo" placeholder="Enter Name" onkeypress="displayMyText()">
+    <!-- <input type="text" id="name" placeholder="Enter Name" onkeyup="displayMyText(this.value)"> -->
+    <h1 id="showText"></h1>
+    <script>
+        // PLAN A
+
+        function displayMyText() {
+            // console.log(document.getElementById('testingDemo'));
+            var myName = document.getElementById('testingDemo').value;
+            // // document.getElementById('showText').textContent = myName;
+            document.getElementById('showText').innerHTML = myName;
+        }
+
+
+        // PLAN B
+
+        // function displayMyText(myText) {
+        //     document.getElementById('showText').textContent = myText;
+        // }
+
+
+    </script>
+</body>
+
+</html>

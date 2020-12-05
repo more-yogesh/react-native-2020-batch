@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mobile {
+            border: 2px solid red;
+        }
+
+        .myinput {
+            background-color: royalblue;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" method="post">
+        <input type="search" name="" id="" placeholder="search" style="width: 100%;">
+        <hr />
+        <label for="name">Enter Name</label>
+        <input type="text" name="name" id="name" class="" style="border:2px solid purple;" placeholder="Enter Name"
+            onclick="alert('I am clicked')" onkeyup="alert('I am up')" onkeypress="console.log('I am pressed')"
+            onkeydown="alert('i am down')" onblur="console.log('i am blur')" onmouseover="console.log('on mouse over')"
+            onchange="console.log('ON CHANGE')">
+        <br />
+        <label for="mobile">Contact Number</label>
+        <input type="number" name="mobile" id="mobile" class="myinput" onblur="myBlurEvent(this.value)">
+        <br />
+        <select name="country" id="">
+            <option>Select Country</option>
+            <option>INDIA</option>
+            <option>PAKISTAN</option>
+        </select>
+        <br />
+        <label for="">Hobbies</label><br />
+        <input type="checkbox" name="hobbies[]" id="dance" value="dance">
+        <label for="dance">DANCE</label><br />
+
+        <input type="checkbox" name="hobbies[]" id="cricket" value="cricket">
+        <label for="cricket">CRICKET</label>
+
+        <input type="checkbox" name="hobbies[]" id="4545" value="travelling">
+        <label for="4545">TRAVEL</label>
+        <br />
+        GENDER
+        <br />
+        <input type="radio" name="gender" id="male" value="male"><label for="male">MALE</label>
+        <input type="radio" name="gender" id="female" value="female"><label for="female">FEMALE</label>
+        <br />
+        ADDRESS
+        <textarea name="" id="" cols="30" rows="10" class="myinput"></textarea>
+        <hr />
+        <input type="date" name="" id="" value="2020-05-12" onclick="myFunction()">
+        <button type="submit">CLICK ME</button>
+    </form>
+    <script>
+        function myBlurEvent(mob) {
+            alert('BLUR CALLLEDD' + mob);
+        }
+
+        function myFunction() {
+            console.log('TEST DEMO');
+        }
+        myFunction();
+
+        function showFullName(first, last = 'More') {
+            console.log(first.toUpperCase() + " " + last);
+        }
+        showFullName('yogesh', 'patel');
+        showFullName('vijay', 'patel');
+        showFullName('vijay', 'patel');
+        showFullName('vijay', 'patel');
+        showFullName('vijay', 'patel');
+        showFullName('vijay');
+
+        
+
+
+    </script>
+</body>
+
+</html>
