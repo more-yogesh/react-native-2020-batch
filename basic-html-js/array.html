@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Practice</title>
+</head>
+
+<body>
+    <p id="totalElements"></p>
+    <p id="totalElements2"></p>
+    <h1 id="newString"></h1>
+    <h1 id="newString2"></h1>
+    <script>
+        var cricketers = ['sachin', 'kohli', 'dhoni', '1', '2', 1, 5, 'df', 'ef'];
+        console.log(cricketers);
+        console.log('Size is ', cricketers.length);
+        console.log('Size is ', cricketers[2]);
+        document.getElementById('totalElements').innerHTML = "<h1>" + cricketers.length + "</h1>";
+        document.getElementById('totalElements2').innerText = "<h1>" + cricketers.length + "</h1>";
+
+        for (i = cricketers.length - 1; i < cricketers.length; i = i + 1) {
+            console.warn(cricketers[i]);
+        }
+
+        // toString array to string convert, and give comma(,) after each element
+
+        // document.getElementById('newString').innerText = cricketers.toString("*");
+        document.getElementById('newString2').innerText = cricketers.join(", ");
+
+        console.log('POP will give you last element: ', cricketers.pop());
+
+        // Push: The push() method adds a new element to an array (at the end):
+
+        cars = ['audi', 'BMW', 'Jeqguar', 'wegnar slier door'];
+
+        // console.log(cars.length);
+
+        // cars.push('Mercedize', 'truck', 'riksha');
+
+        // console.log(cars);
+
+        // cars.shift();
+
+        // console.log(cars);
+
+        // cars.unshift('1st', 'lemborgini');
+
+        // console.log(cars);
+
+        // cars[3]  = 'rolls roys';
+
+        // console.log(cars);
+
+        // delete cars[3];
+
+        // console.log(cars);
+
+
+        // cars.splice(1, 3, "fortuner");
+
+        // console.log(cars);
+
+        // var trucks = ['TATA', 'Ashol Layland', 'Eicher'];
+        // var test = ['I am test'];
+
+        // var total = cars.concat(trucks, test);
+
+        // console.log(total);
+
+
+        fruits = ['apple', 'tomato', 'mango', 'banana', 'cv12', 'banana'];
+
+        // console.log(fruits.slice(2,4));
+
+        // console.log(fruits.sort());
+        // console.log(fruits.reverse());
+
+
+        // fruits.forEach(function (value, index) {
+        //     console.log(value.toUpperCase());
+        // });
+
+
+        var playerScore = [10, 20, 50, 60, 10, 5, 0, 1, 2, 50, 80];
+
+        var newPlayers = playerScore.filter(function (value, index) {
+            return value > 50;
+        });
+
+
+
+        // console.log(newPlayers);
+
+
+        // console.log(playerScore.indexOf(80));
+
+        // console.log(fruits.indexOf('mango'));
+
+        // console.log(fruits.lastIndexOf('banana'));
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
