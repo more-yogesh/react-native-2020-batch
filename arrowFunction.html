@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // ES5
+        var total = function (a, b) {
+            return a * b;
+        }
+
+        // when you need single line use this(ES6)
+        var singleLine = (p, q) => p * q;
+
+
+        console.log(singleLine(9, 9));
+
+        // when you need multiple line use this(ES6)
+        var newTotal = (a, b) => {
+            var newVal = (a * b) / 10;
+            return "Your New Total Is :" + newVal;
+        }
+
+
+
+        console.log('New Total ', newTotal(50, 50));
+
+        console.log(total(10, 20));
+    </script>
+</body>
+
+</html>
