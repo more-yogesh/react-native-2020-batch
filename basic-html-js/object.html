@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+
+<body>
+    <h1 id="bname"></h1>
+    <script>
+        var building = {
+            name: "Swaminarayan Complex",
+            floor: 5,
+            totalFlats: 500,
+            lift: function (name) {
+                alert('up and down ' + name);
+            }
+        };
+
+
+        // function sayHello(name) {
+        //     alert('Hello ' + name);
+        // }
+
+        // sayHello('yogesh');
+
+        // document.getElementById('bname').innerHTML = building.name + " " + building.floor;
+        // console.log(building.name, building.floor, building.totalFlats);
+
+        // building.lift('yogesh');
+
+        /*
+            Single Employee
+        */
+        var employee = {
+            name: 'yogesh',
+            desgignation: 'developer',
+            salary: 20000,
+            details: function () {
+                return 'Name is ' + this.name + +' Desgination is ' + this.desgignation + ' salary is' + this.salary;
+            }
+        }
+        console.log(employee.details());
+
+        /*
+            multiple employee
+        */
+
+        // [1,2.5,3,'suresh', [], {}, {}, {}]
+
+        var employees = [
+            {
+                name: 'yogesh',
+                designation: 'operator',
+                salary: 2000
+            },
+            {
+                name: 'ramesh',
+                designation: 'CEO',
+                salary: 50000
+            },
+            {
+                name: 'suresh',
+                designation: 'Director',
+                salary: 100000,
+                bioData: {
+                    married: 'no',
+                    locality: 'indian',
+                    age: 18,
+                    personal: {
+                        hobbies: 'dance'
+                    }
+                }
+            }
+        ];
+
+        console.log(employees[2].bioData, '====> this is value');
+
+        console.log(employees[1].salary, employees[1].designation);
+
+        let allData = '';
+
+        for (i = 0; i < employees.length; i++) {
+            // allData += '<div><p>' + parseInt(i + 1) + '. ' + employees[i].name + '</p></div>';
+            allData += `<div>
+                            <p>${parseInt(i + 1)}. ${employees[i].name}</p>
+                        </div>`;
+        }
+
+        document.getElementById('bname').innerHTML = allData;
+
+
+
+
+        // alert(employees.length);
+
+
+        // console.log(Math.round(100.50));
+        console.log(8 * 8 * 8);
+        console.log(Math.pow(8, 3));
+
+
+        var newVal = Math.round(Math.sqrt(640));
+
+        console.log(Math.pow(newVal, 3));
+
+        console.log(Math.random());
+
+
+
+    </script>
+</body>
+
+</html>
