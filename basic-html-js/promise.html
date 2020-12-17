@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Promise: A Promise is a JavaScript object that links "Producing Code" and "Consuming Code".
+
+        // syntax
+        let promiseObject = new Promise(function (myResolve, myReject) {
+            myResolve();
+            myReject();
+        });
+        promiseObject.then(function (event) { }, function (event) { });
+
+
+        let dairyMilk = new Promise(function (myResolve, myReject) {
+            setTimeout(function () {
+                myResolve('I love You!!!');
+            }, 3000);
+        });
+
+
+        // dairyMilk.then();
+
+        let id = Symbol('id');
+        console.log(id);
+
+
+
+        
+    </script>
+</body>
+
+</html>

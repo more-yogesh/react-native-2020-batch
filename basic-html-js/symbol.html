@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let mySum = (...number) => {
+            // return number;
+            len = number.length;
+            total = 0;
+            for (i = 0; i < len; i++) {
+                total += number[i];
+                console.log('Total:' + total, ' Number' + number[i]);
+            }
+            return total;
+
+        }
+
+        console.log(mySum(10, 20, 20, 10, 20, 20));
+
+        let age = [10, 50, 60, 45, 18, 12, 10];
+
+        voter = age.find(checkEligible);
+        console.log(voter);
+
+        function checkEligible(value, index, array) {
+            return value > 18;
+        }
+
+        fruits = ['apple', 'tomato', 'mango', 'banana', 'cv12', 'banana'];
+
+        console.log(fruits.includes('apple'));
+
+    </script>
+</body>
+
+</html>

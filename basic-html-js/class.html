@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsClass</title>
+</head>
+
+<body>
+    <script>
+        // OOP 
+        // class:
+        //     wrapping data member and member function into single unit is known as class(enspulation)
+
+        class College {
+            // what is 'this'? => this is keyword which is represent current class reference.
+            name; //data member
+            street;
+            state;
+
+            constructor(collegeName, streetName, stateName) {
+                this.name = collegeName;
+                this.street = streetName;
+                this.state = stateName;
+                // constructor is special function which is execute by default.
+                // console.log('I am constructor!!!');
+            }
+            address() {
+                // "college name, street name, state"
+                return "Created Address Is : " + this.name + ", " + this.street + ", " + this.state;
+            }
+            originalAddress() {
+                return `Original: ${this.name} ${this.street} ${this.state} ${this.address()}`; //es6
+            }
+        }
+
+        let col = new College('Oxford College', 'William Street 350 C Block', 'Washington DC');
+        let col2 = new College('William College', '12th block Street', 'LA');
+
+        // console.log(col.address());
+        console.log(col2.originalAddress());
+
+    </script>
+</body>
+
+</html>
